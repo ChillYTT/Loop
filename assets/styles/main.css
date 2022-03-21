@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
+:root {
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --accent-color: #f75dfc;
+}
+
+[theme=dark] {
+    --light-color: #000000;
+    --dark-color: #ffffff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--light-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+p2,
+a,
+label {
+    color: var(--dark-color);
+    font-family: 'Rubik', sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: var(--light-color);
+    z-index: 99;
+}
+
+.nav-button {
+    float: left;
+    padding-right: 1vw;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-button a {
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 40px;
+    letter-spacing: 0.1rem;
+}
+
+#settings {
+    display: flex;
+    align-items: center;
+}
+
+#login {
+    margin-top: 18px;
+    margin-right: 20px;
+}
+
+.selected a {
+    border-bottom: 2px solid var(--dark-color);
+}
+
+#leftbar {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 2%;
+}
+
+#middlebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#middlebar p {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 30px;
+}
+
+#rightbar {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    padding-right: 2%;
+}
+
+#rightbar p {
+    font-size: 17px;
+}
+
+@media (max-width: 1050px) {
+    #rightbar {
+        display: none;
+    }
+    #middlebar {
+        justify-content: right;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 675px) {
+    #middlebar {
+        position: absolute;
+        top: 0px;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+    }
+    #navbar {
+        height: 100px;
+    }
+    #leftbar {
+        margin-top: 45px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+        padding-left: 2%;
+    }
+}
+
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#scrollb {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
