@@ -1,0 +1,347 @@
+.hidden {
+    opacity: 0;
+}
+
+.text-fade {
+    font-size: 35px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#sections {
+    text-align: center;
+}
+
+
+/* team members */
+
+#sections section {
+    padding-top: 15%;
+}
+
+#scientists p {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 8vw;
+}
+
+#scientists div {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#scientists div div {
+    display: inline-block;
+    height: 100%;
+    width: 25%;
+    margin-right: 5%;
+}
+
+#scientists div div p {
+    font-size: 3vw;
+    margin-bottom: 0px;
+}
+
+#scientists div div p2 {
+    font-size: 2vw;
+    margin-top: 0px;
+}
+
+.scientist-image {
+    width: 20vw;
+}
+
+
+/* social links */
+
+#follow p {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 8vw;
+}
+
+#follow div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#follow div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    margin-right: 5%;
+}
+
+#viewer p {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 4vw;
+}
+
+
+/* footer */
+
+footer {
+    background-color: rgb(40, 40, 40);
+    padding: 30px;
+    padding-bottom: 100px;
+    width: calc(100% - 60px);
+    font-family: 'Spline Sans', sans-serif;
+    height: 100px;
+    color: white;
+}
+
+footer .terms {
+    color: white;
+    text-decoration: none;
+}
+
+footer .terms:hover {
+    text-decoration: underline;
+}
+
+#left-footer {
+    margin-top: -30px;
+    width: 30%;
+    float: left;
+}
+
+#left-footer a {
+    font-size: 16px;
+    color: white;
+}
+
+#left-footer a:hover {
+    color: var(--accent-color);
+}
+
+#center-image {
+    position: absolute;
+    left: calc(50%);
+    transform: translate(-50%);
+    height: 15vw;
+    max-height: 125px;
+}
+
+#center-text {
+    color: white;
+    position: absolute;
+    left: calc(50%);
+    transform: translate(-50%);
+    margin-top: 135px;
+}
+
+#right-footer {
+    float: right;
+    width: 30%;
+    margin-top: -30px;
+}
+
+#right-footer div {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#right-footer svg {
+    margin: 8px;
+    margin-top: 0;
+}
+
+.footer-title {
+    color: white;
+    font-size: 4vw;
+    margin: 0;
+    margin-top: 15px;
+}
+
+@media (min-width: 1500px) {
+    #left-footer p {
+        font-size: 50px;
+    }
+    #right-footer p {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 750px) {
+    footer {
+        height: 160px;
+    }
+    #left-footer {
+        width: 100%;
+        float: none;
+    }
+    #left-footer p {
+        font-size: 25px !important;
+    }
+    #left-footer a {
+        font-size: 15px !important;
+    }
+    #center-image {
+        display: none;
+    }
+    #center-text {
+        margin-top: 120px;
+    }
+    #center-text a {
+        color: white;
+        text-decoration: none;
+    }
+    #right-footer {
+        float: none;
+        width: 100%;
+        margin-top: 35px;
+    }
+    #right-footer p {
+        font-size: 25px !important;
+    }
+}
+
+
+/* featured games slides */
+
+#featured {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featuredSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.featuredSlide img {
+    width: 90%;
+    height: 90vh;
+    border-radius: 80px;
+    z-index: -2;
+    opacity: 0.7;
+    border: 4px solid var(--accent-color);
+}
+
+.featuredSlide div {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: -5%;
+}
+
+.featuredSlide div p {
+    color: var(--light-color);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 11vw;
+    text-shadow: -6px -6px 0 var(--accent-color), 6px -6px 0 var(--accent-color), -6px 6px 0 var(--accent-color), 6px 6px 0 var(--accent-color);
+    margin-bottom: 5%;
+    margin-top: 0%;
+}
+
+.featuredSlide div button {
+    cursor: pointer;
+    color: var(--light-color);
+    background-color: var(--accent-color);
+    height: 100%;
+    width: 25%;
+    z-index: -1;
+    opacity: 1;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 4vw;
+    border-color: transparent;
+    border-radius: 10px;
+}
+
+.slideButtons {
+    position: absolute;
+    width: 100%;
+}
+
+.slidePrev,
+.slideNext {
+    position: absolute;
+    padding: 0px;
+    width: 10%;
+    cursor: pointer;
+    z-index: 0;
+    background-color: transparent;
+    border: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+}
+
+.slidePrev:hover,
+.slideNext:hover {
+    opacity: 1;
+    transition: opacity 0.15s ease;
+}
+
+.slidePrev button img,
+.slideNext button img {
+    padding: 0%;
+    margin: 0%;
+}
+
+.slideNext {
+    right: 0;
+    margin-right: 0%;
+}
+
+.slidePrev {
+    margin-left: 0%;
+}
+
+@media (max-width: 600px) {
+    #featured {
+        margin-top: 110px;
+    }
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.25s;
+    animation-name: fade;
+    animation-duration: 1.25s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.socialDiv :hover {
+    fill: var(--accent-color);
+}
