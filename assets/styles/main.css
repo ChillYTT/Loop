@@ -3,7 +3,7 @@
 :root {
     --light-color: #ffffff;
     --dark-color: #000000;
-    --accent-color: #ffffff;
+    --accent-color: #00DEFF;
 }
 
 [theme=dark] {
