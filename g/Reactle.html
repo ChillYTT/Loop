@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
     <title>Loop</title>
 
-    <link rel="stylesheet" href="/assets/styles/main.css">
-    <link rel="icon" href="https://emojis.wiki/emoji-pics/apple/curly-loop-apple.png">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
+    <link rel="stylesheet" href="https://loop-beta.vercel.app/assets/styles/main.css">
+    <link rel="icon" href="https://loop-beta.vercel.app/img/logo.png">
 
+    <link rel='stylesheet' href='https://loop-beta.vercel.appassets/styles/index.css'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+
+    <!--Google Adsense-->
+    <script data-ad-client="ca-pub-3486863589051210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
 
 <body>
-    <div id="navbar">
+ <div id="navbar">
         <div id="leftbar">
-                        <div class="nav-button selected"><a href="/index.html">Home</a></div>
-            <div class="nav-button selected"><a href="/games.html">Games</a></div>
+                        <div class="nav-button selected"><a href="index.html">Home</a></div>
+            <div class="nav-button selected"><a href="games.html">Games</a></div>
         </div>
 
        <div id="middlebar">
@@ -21,78 +34,107 @@
         </div>
                   
                     <div id="rightbar">
-            <a id="settings" href="/settings.html"><img src="/img/settings.svg"></img>
+            <a id="settings" href="settings.html"><img src="https://loop-beta.vercel.app/img/settings.svg"></img>
             </a>
         </div>
     </div>
 
-
-<html>
-  <head>
-      <link rel="manifest" href="https://whylol.vercel.app/manifest.json">
-  <link rel="stylesheet" href="https://whylol.vercel.app/css/style.css">
-  <link rel="icon" href="https://whylol.vercel.app/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="https://whylol.vercel.app/images/hello-icon-152.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="white"/>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Hello World">
-  <meta name="msapplication-TileImage" content="https://whylol.vercel.app/images/hello-icon-144.png">
-  <meta name="msapplication-TileColor" content="#FFFFFF">
-    <script src="https://whylol.vercel.app.js/main.js"></script>
-
-      
-<link rel="shortcut icon" type="image/png" href="https://whylol.vercel.app/images/hello-icon-128.png">
-
-
-</body>
-</head>
-<head>
-  <body>
- <link rel="shortcut icon" type="image/png" href="https://t3.ftcdn.net/jpg/03/38/86/64/360_F_338866409_DwTPy4leMhHptwhYIcKxVmiN8JBK1OU5.jpg">
-
- 
-
-
-
-
-  </div> 
+    <div id="sections">
+<div id="container">
+  <iframe src="https://123abcyuhg54321.vercel.app/g/re/"></iframe>
+  <div>
+    <button class="button">Click me to fullscreen the iframe</button>
+  </div>
+  <div class="info">You can check keydown event listener when the browser are in fullscreen and press F11 and ESC by console log on developer tools</div
+  <div class="error"></div>
 </div>
- <head>
-    <style type="text/css">
-        html {
-            overflow: auto;
-        }
-          
-        html,
-        body,
-        div,
-        iframe {
-            margin: 0px;
-            padding: 0px;
-            height: 100%;
-            border: none;
-        }
-          
-        iframe {
-            display: block;
-            width: 100%;
-            border: none;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-    </style>
-</head>
-  
-<body>
-    <iframe src="https://123abcyuhg54321.vercel.app/g/re/"
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0" 
-            width="100%" 
-            height="100%" 
-            scrolling="auto">
-  </iframe>
-  
-  
+        
+        <style>
+            var button = document.querySelector('#container .button');
+button.addEventListener('click', fullscreen);
+// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
+// so don't use it to detect exit fullscreen
+document.addEventListener('keydown', function (e) {
+  console.log('key press' + e.keyCode);
+});
+// detect enter or exit fullscreen mode
+document.addEventListener('webkitfullscreenchange', fullscreenChange);
+document.addEventListener('mozfullscreenchange', fullscreenChange);
+document.addEventListener('fullscreenchange', fullscreenChange);
+document.addEventListener('MSFullscreenChange', fullscreenChange);
+
+function fullscreen() {
+  // check if fullscreen mode is available
+  if (document.fullscreenEnabled || 
+    document.webkitFullscreenEnabled || 
+    document.mozFullScreenEnabled ||
+    document.msFullscreenEnabled) {
+    
+    // which element will be fullscreen
+    var iframe = document.querySelector('#container iframe');
+    // Do fullscreen
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      iframe.mozRequestFullScreen();
+    } else if (iframe.msRequestFullscreen) {
+      iframe.msRequestFullscreen();
+    }
+  }
+  else {
+    document.querySelector('.error').innerHTML = 'Your browser is not supported';
+  }
+}
+
+function fullscreenChange() {
+  if (document.fullscreenEnabled ||
+       document.webkitIsFullScreen || 
+       document.mozFullScreen ||
+       document.msFullscreenElement) {
+    console.log('enter fullscreen');
+  }
+  else {
+    console.log('exit fullscreen');
+  }
+  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
+  // comment this line and you will see
+  var iframe = document.querySelector('iframe');
+  iframe.src = iframe.src;
+}
+            
+#container {
+  text-align: center;
+  height: 100%;
+}
+
+.button {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 6px 12px;
+}
+.info {
+  padding: 20px;
+}
+.error {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+}
+iframe {
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+}
+        </style>
