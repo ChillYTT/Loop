@@ -19,7 +19,6 @@ function fullscreen() {
     document.msFullscreenEnabled) {
     
     // which element will be fullscreen
-    var iframe = document.querySelector('#container iframe');
     // Do fullscreen
     if (iframe.requestFullscreen) {
       iframe.requestFullscreen();
